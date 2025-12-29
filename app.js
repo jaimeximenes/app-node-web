@@ -50,7 +50,12 @@ app.get('/', (req, res) => {
         </html>
     `);
 });
-
+app.get('/nova-rota', (req, res) => {
+    res.json({ 
+        message: 'Nova funcionalidade adicionada na branch dev',
+        timestamp: new Date().toISOString()
+    });
+});
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
